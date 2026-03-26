@@ -25,8 +25,8 @@ export default function Portfolio() {
 
         {/* RIGHT SIDE (CLICKABLE IMAGE) */}
         <a
-          href="https://www.onestack.in/"
-          target="_blank"
+          href="/portfolio"
+          
           className="block"
         >
           <div className="rounded-[40px] overflow-hidden">

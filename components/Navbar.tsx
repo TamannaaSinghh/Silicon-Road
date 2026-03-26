@@ -3,8 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [blur, setBlur] = useState(false);
@@ -59,18 +61,23 @@ export default function Navbar() {
 
         {/* Navigation Links */}
         <nav className="flex gap-[60px] text-[16px] tracking-[2px] uppercase">
-          <a href="https://www.onestack.in/" className="hover:opacity-70 transition">
-            Portfolio
-          </a>
-          <a href="/our-team" className="hover:opacity-70 transition">
-            Our Team
-          </a>
-          <a href="/blog" className="hover:opacity-70 transition">
-            News & Blog
-          </a>
-          <a href="#contact" className="hover:opacity-70 transition">
-            Contact Us
-          </a>
+          {[
+            { label: "Portfolio", href: "/portfolio" },
+            { label: "Our Team", href: "/our-team" },
+            { label: "News & Blog", href: "/blog" },
+            { label: "Contact Us", href: "#contact" },
+          ].map(({ label, href }) => {
+            const isActive = href.startsWith("/") && pathname === href;
+            return (
+              <a
+                key={href}
+                href={href}
+                className={`transition hover:opacity-70 ${isActive ? "text-gray-400" : ""}`}
+              >
+                {label}
+              </a>
+            );
+          })}
         </nav>
 
       </div>
