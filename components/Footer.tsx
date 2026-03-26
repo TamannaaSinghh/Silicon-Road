@@ -25,18 +25,6 @@ export default function Footer() {
             </Link>
           </div>
 
-          {/* Address 1 */}
-          <div>
-            <p className="font-semibold mb-4">
-              Silicon Road Ventures
-            </p>
-            <p className="text-sm text-white/80 leading-7">
-              1447 Peachtree St NE <br />
-              Suite 700 <br />
-              Atlanta, GA 30309
-            </p>
-          </div>
-
           {/* Address 2 */}
           <div>
             <p className="font-bold mb-4">
@@ -48,6 +36,20 @@ export default function Footer() {
               Mumbai, India 400013
             </p>
           </div>
+
+          {/* Address 1 */}
+          <div>
+            <p className="font-bold mb-4">
+              Silicon Road Ventures
+            </p>
+            <p className="text-sm text-white/80 leading-7">
+              1447 Peachtree St NE <br />
+              Suite 700 <br />
+              Atlanta, GA 30309
+            </p>
+          </div>
+
+          
 
           {/* Social */}
           <div>

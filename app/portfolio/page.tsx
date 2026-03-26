@@ -1,11 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect, useRef } from "react";
-import { Plus, X, ChevronDown } from "lucide-react";
-import { categories, portfolioLogos, getPortfolioByCategory } from "@/data/portfolio-logos";
+import { useEffect, useRef, useState } from "react";
+import { Plus } from "lucide-react";
+import { portfolioLogos } from "@/data/portfolio-logos";
 
-function PortfolioCard({ item, index }: { item: (typeof portfolioLogos)[0]; index: number }) {
+function PortfolioCard({ item }: { item: (typeof portfolioLogos)[0] }) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
@@ -30,7 +30,6 @@ function PortfolioCard({ item, index }: { item: (typeof portfolioLogos)[0]; inde
       style={{
         opacity: visible ? 1 : 0,
         transform: visible ? "translateY(0)" : "translateY(40px)",
-        transitionDelay: `${(index % 4) * 100}ms`,
       }}
     >
       <Image
@@ -47,71 +46,7 @@ function PortfolioCard({ item, index }: { item: (typeof portfolioLogos)[0]; inde
   );
 }
 
-function CategoryDropdown({
-  selected,
-  onChange,
-}: {
-  selected: string;
-  onChange: (val: string) => void;
-}) {
-  const [open, setOpen] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-
-  // Close on outside click
-  useEffect(() => {
-    const handler = (e: MouseEvent) => {
-      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
-    };
-    document.addEventListener("mousedown", handler);
-    return () => document.removeEventListener("mousedown", handler);
-  }, []);
-
-  const displayLabel = selected === "all" ? "All" : selected;
-
-  return (
-    <div ref={ref} className="relative w-[380px]">
-      {/* Trigger */}
-      <button
-        onClick={() => setOpen((p) => !p)}
-        className="w-full flex items-center justify-between border border-yellow-400 rounded-full px-6 py-4 text-[15px] text-gray-800 bg-white focus:outline-none"
-      >
-        <span>{displayLabel}</span>
-        <ChevronDown
-          className={`text-gray-500 transition-transform duration-300 ${open ? "rotate-180" : ""}`}
-          size={18}
-        />
-      </button>
-
-      {/* Dropdown panel */}
-      {open && (
-        <ul className="absolute top-[calc(100%+8px)] left-0 w-full bg-white border border-yellow-400 rounded-[20px] overflow-hidden z-50 shadow-lg">
-          {categories.map((cat) => {
-            const label = cat === "all" ? "All" : cat;
-            const isActive = cat === selected;
-            return (
-              <li
-                key={cat}
-                onClick={() => { onChange(cat); setOpen(false); }}
-                className={`px-6 py-3 text-[14px] cursor-pointer transition-colors duration-200
-                  ${isActive
-                    ? "bg-[#6f8fa3] text-white font-semibold"
-                    : "text-gray-700 hover:bg-yellow-400/20 hover:text-gray-900"
-                  }`}
-              >
-                {label}
-              </li>
-            );
-          })}
-        </ul>
-      )}
-    </div>
-  );
-}
-
 const PortfolioPage = () => {
-  const [selectedCategory, setSelectedCategory] = useState("all");
-  const filtered = getPortfolioByCategory(selectedCategory);
-
   return (
     <main className="w-full">
 
@@ -130,8 +65,18 @@ const PortfolioPage = () => {
           </div>
         </div>
         <div className="absolute right-16 bottom-24 flex flex-col gap-4 text-white">
-          <X className="cursor-pointer hover:scale-110 transition" />
-          <span className="font-bold text-xl cursor-pointer hover:scale-110 transition">in</span>
+          {/* X / Twitter */}
+          <a href="https://x.com/SiliconRoadHQ" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform block">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+          {/* LinkedIn */}
+          <a href="https://www.linkedin.com/company/siliconroadusa/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform block">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
         </div>
       </section>
 
@@ -146,42 +91,16 @@ const PortfolioPage = () => {
         </div>
       </section>
 
-      {/* ===== FILTER + PORTFOLIO SECTION ===== */}
+      {/* ===== PORTFOLIO SECTION ===== */}
       <section className="w-full bg-white py-[80px] px-6">
         <div className="max-w-[1200px] mx-auto">
-
-          {/* FILTER BY heading */}
-          <p className="text-center text-[15px] tracking-[4px] text-gray-500 mb-8">
-            FILTER BY
-          </p>
-
-          {/* Custom Dropdown */}
-          <div className="flex flex-col items-center mb-4">
-            <p className="text-[14px] font-semibold text-gray-500 mb-3 self-start ml-[calc(50%-190px)]">
-              Category
-            </p>
-            <CategoryDropdown selected={selectedCategory} onChange={setSelectedCategory} />
-          </div>
-
-          {/* Reset filter */}
-          {selectedCategory !== "all" && (
-            <div className="flex justify-center mb-10 mt-3">
-              <button
-                onClick={() => setSelectedCategory("all")}
-                className="text-[13px] text-gray-400 underline underline-offset-2 hover:text-gray-700 transition"
-              >
-                reset filter
-              </button>
-            </div>
-          )}
-
-          {/* Cards grid — 4 per row */}
-          <div className="grid grid-cols-4 gap-6 mt-10">
-            {filtered.map((item, i) => (
-              <PortfolioCard key={`${item.name}-${i}`} item={item} index={i} />
+          <div className="flex justify-center">
+            {portfolioLogos.map((item, i) => (
+              <a key={i} href="https://www.onestack.in" target="_blank" rel="noopener noreferrer" className="w-[280px]">
+                <PortfolioCard item={item} />
+              </a>
             ))}
           </div>
-
         </div>
       </section>
 
