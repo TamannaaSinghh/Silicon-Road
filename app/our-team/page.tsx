@@ -203,7 +203,7 @@ export default function OurTeamPage() {
           Build the future of commerce with us.
         </h2>
         <a
-          href=""
+          href="/contact"
           className="px-16 py-5 border border-yellow-400 rounded-full text-[#2d2d2d] text-[14px] tracking-[3px] uppercase hover:bg-yellow-400 transition hover:text-black"
         >
           Reach Out
