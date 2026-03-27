@@ -26,20 +26,30 @@ function PortfolioCard({ item }: { item: (typeof portfolioLogos)[0] }) {
   return (
     <div
       ref={ref}
-      className="bg-[#6f8fa3] rounded-[32px] flex flex-col items-center justify-center gap-5 px-6 py-10 min-h-[260px] group transition-all duration-700 ease-out"
+      className="bg-[#6f8fa3] rounded-[32px] flex flex-row items-center gap-10 px-10 py-10 min-h-[220px] group transition-all duration-700 ease-out"
       style={{
         opacity: visible ? 1 : 0,
         transform: visible ? "translateY(0)" : "translateY(40px)",
       }}
     >
-      <Image
-        src={item.logo}
-        alt={item.name}
-        width={150}
-        height={55}
-        className="object-contain w-[150px] h-[55px]"
-      />
-      <p className="text-white text-[16px] font-bold text-center leading-snug group-hover:text-yellow-400 transition-colors duration-300">
+      {/* Logo on the left — clickable */}
+      <a
+        href={item.website}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex-shrink-0 flex items-center justify-center bg-white/10 hover:bg-white/20 transition-colors duration-300 rounded-2xl p-6 w-[180px] h-[140px]"
+      >
+        <Image
+          src={item.logo}
+          alt={item.name}
+          width={150}
+          height={80}
+          className="object-contain w-[150px] h-[80px]"
+        />
+      </a>
+
+      {/* Description on the right */}
+      <p className="text-white text-[16px] leading-relaxed group-hover:text-yellow-400 transition-colors duration-300">
         {item.tagline}
       </p>
     </div>
@@ -86,7 +96,7 @@ const PortfolioPage = () => {
         <div className="absolute inset-0 bg-black/20" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
           <p className="tracking-[4px] text-xl mb-4">FEATURED STARTUP</p>
-          <h2 className="text-5xl font-bold font-serif">knit</h2>
+          <Image src="/images/portfolio-logos/onestack.png" alt="OneStack" width={180} height={65} className="object-contain drop-shadow-lg" />
           <div className="w-2 h-2 bg-yellow-400 rounded-full mt-6" />
         </div>
       </section>
@@ -94,11 +104,9 @@ const PortfolioPage = () => {
       {/* ===== PORTFOLIO SECTION ===== */}
       <section className="w-full bg-white py-[80px] px-6">
         <div className="max-w-[1200px] mx-auto">
-          <div className="flex justify-center">
+          <div className="flex flex-col gap-6">
             {portfolioLogos.map((item, i) => (
-              <a key={i} href="https://www.onestack.in" target="_blank" rel="noopener noreferrer" className="w-[280px]">
-                <PortfolioCard item={item} />
-              </a>
+              <PortfolioCard key={i} item={item} />
             ))}
           </div>
         </div>

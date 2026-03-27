@@ -26,15 +26,22 @@ export default function Portfolio() {
         {/* RIGHT SIDE (CLICKABLE IMAGE) */}
         <a
           href="/portfolio"
-          
+
           className="block"
         >
-          <div className="rounded-[40px] overflow-hidden">
+          <div className="relative rounded-[40px] overflow-hidden">
             <img
-              src="/images/portfolio.png" // replace with your image
+              src="/images/portfolio3.png" // replace with your image
               alt="portfolio"
-              className="w-full h-full object-cover hover:scale-105 transition duration-300"
+              className="w-full h-[300px] object-cover hover:scale-105 transition duration-300"
             />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <img
+                src="/images/portfolio-logos/onestack.png"
+                alt="OneStack"
+                className="w-40 object-contain drop-shadow-lg"
+              />
+            </div>
           </div>
         </a>
 
