@@ -104,7 +104,7 @@ const PortfolioPage = () => {
       {/* ===== PORTFOLIO SECTION ===== */}
       <section className="w-full bg-white py-[80px] px-6">
         <div className="max-w-[1200px] mx-auto">
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6 max-w-[700px] mx-auto">
             {portfolioLogos.map((item, i) => (
               <PortfolioCard key={i} item={item} />
             ))}
