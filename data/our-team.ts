@@ -15,6 +15,20 @@ export const teamData = [
     ],
   },
   {
+    name: "Ajay Mahajan.",
+    role: "MANAGING DIRECTOR & PARTNER",
+    image: "/images/Ajay.png",
+    description:
+      "Seasoned CEO and board-level executive with over three decades of leadership experience across commercial and wholesale banking, financial markets, credit ratings, and fintech. Proven ability to architect, scale, and transform financial institutions, with a consistent record of driving profitability and sustainable stakeholder value.",
+    twitter: "",
+      linkedin: "https://www.linkedin.com/in/ajay-mahajan-914191226/",
+    companies: [
+      "/images/Ajay/1.png",
+      "/images/Ajay/2.png",
+      "/images/Ajay/3.png",
+    ],
+  },
+  {
     name: "Ross Kimbel.",
     role: "GENERAL PARTNER",
     image: "/images/RossKimbel.png",
@@ -63,20 +77,6 @@ export const teamData = [
     companies: [
       "/images/Shanuish/1.png",
       "/images/Shanuish/2.png",
-    ],
-  },
-  {
-    name: "Ajay Mahajan.",
-    role: "MANAGING DIRECTOR & PARTNER",
-    image: "/images/Ajay.png",
-    description:
-      "Seasoned CEO and board-level executive with over three decades of leadership experience across commercial and wholesale banking, financial markets, credit ratings, and fintech. Proven ability to architect, scale, and transform financial institutions, with a consistent record of driving profitability and sustainable stakeholder value.",
-    twitter: "",
-      linkedin: "https://www.linkedin.com/in/ajay-mahajan-914191226/",
-    companies: [
-      "/images/Ajay/1.png",
-      "/images/Ajay/2.png",
-      "/images/Ajay/3.png",
     ],
   },
   {

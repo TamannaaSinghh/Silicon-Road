@@ -5,6 +5,11 @@ export const team = [
     image: "/images/SidMookerji.png",
   },
   {
+    name: "Ajay Mahajan.",
+    role: "Managing director & Partner",
+    image: "/images/Ajay.png",
+  },
+  {
     name: "Ross Kimberl.",
     role: "General Partner",
     image: "/images/RossKimbel.png",
@@ -24,11 +29,7 @@ export const team = [
     role: "Principal At Large",
     image: "/images/ShaunishMookerji.png",
   },
-  {
-    name: "Ajay Mahajan.",
-    role: "Managing director & Partner",
-    image: "/images/Ajay.png",
-  },
+  
   {
     name: "Gaurav Thakkar.",
     role: "Principal",

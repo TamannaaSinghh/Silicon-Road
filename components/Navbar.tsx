@@ -64,7 +64,7 @@ export default function Navbar() {
           {[
             { label: "Portfolio", href: "/portfolio" },
             { label: "Our Team", href: "/our-team" },
-            { label: "News & Blog", href: "/blog" },
+            // { label: "News & Blog", href: "/blog" },
             { label: "Contact Us", href: "/contact" },
           ].map(({ label, href }) => {
             const isActive = href.startsWith("/") && pathname === href;
