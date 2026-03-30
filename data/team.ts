@@ -10,7 +10,7 @@ export const team = [
     image: "/images/Ajay.png",
   },
   {
-    name: "Ross Kimberl.",
+    name: "Ross Kimbel.",
     role: "General Partner",
     image: "/images/RossKimbel.png",
   },
