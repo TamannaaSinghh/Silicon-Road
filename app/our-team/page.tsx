@@ -101,7 +101,7 @@ function MemberCard({ member, index }: { member: (typeof members)[0]; index: num
     return () => observer.disconnect();
   }, []);
 
-  const bg = index % 2 === 0 ? "#6f8fa3" : "#829faf";
+  const bg = index % 2 === 0 ? "#6f8fa3" : "#5f7f93";
 
   return (
     <div ref={ref} style={{ backgroundColor: bg }} className="w-full py-[80px]">
@@ -135,7 +135,7 @@ function MemberCard({ member, index }: { member: (typeof members)[0]; index: num
         {/* RIGHT CONTENT */}
         <div className="pl-10 pr-20 flex-1">
           <h2
-            className="text-yellow-400 text-[36px] font-bold mb-2 transition-all duration-700 ease-out"
+            className="text-white text-[36px] font-bold mb-2 transition-all duration-700 ease-out"
             style={{ opacity: visible ? 1 : 0, transform: visible ? "translateX(0)" : "translateX(60px)", transitionDelay: "0ms" }}
           >
             {member.name}

@@ -64,6 +64,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/company/siliconroadusa/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn"
                 className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-black"
               >
                 <FaLinkedinIn />
@@ -74,6 +75,7 @@ export default function Footer() {
                 href="https://x.com/siliconroadhq?lang=en"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="X (Twitter)"
                 className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-black"
               >
                 <FaTwitter />

@@ -88,7 +88,7 @@ export default function Team() {
           <div className="justify-center items-center text-center col-span-4 pt-[60px]">
             <a
               href="/our-team"
-              className="mt-10 px-8 py-5 border border-yellow-400 rounded-full text-center items-center text-[16px] text-[#ffffff] tracking-[2px] uppercase hover:bg-yellow-400 transition hover:text-black"
+              className="mt-10 px-8 py-5 border border-yellow-400 rounded-full text-center items-center text-[16px] text-[#ffffff] tracking-[2px] uppercase bg-[#4e6472] hover:bg-yellow-400 transition hover:text-black"
             >
               get to know us
             </a>

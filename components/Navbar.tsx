@@ -72,7 +72,7 @@ export default function Navbar() {
               <a
                 key={href}
                 href={href}
-                className={`transition hover:opacity-70 ${isActive ? "text-gray-400" : ""}`}
+                className={`transition hover:opacity-70 ${isActive ? "text-gray-500" : ""}`}
               >
                 {label}
               </a>
