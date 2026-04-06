@@ -70,7 +70,7 @@ function TeamCard({ member, index }: { member: (typeof team)[0]; index: number }
 
 export default function Team() {
   return (
-    <section id="team" className="w-full bg-[#6f8fa3] py-[80px]">
+    <section id="team" className="w-full bg-[#507490] py-[80px]">
       <div className="max-w-[1200px] mx-auto px-6">
 
         {/* Heading */}

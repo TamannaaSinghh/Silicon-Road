@@ -101,7 +101,7 @@ function MemberCard({ member, index }: { member: (typeof members)[0]; index: num
     return () => observer.disconnect();
   }, []);
 
-  const bg = index % 2 === 0 ? "#6f8fa3" : "#5f7f93";
+  const bg = index % 2 === 0 ? "#507490" : "#44667a";
 
   return (
     <div ref={ref} style={{ backgroundColor: bg }} className="w-full py-[80px]">
@@ -176,7 +176,7 @@ function MemberCard({ member, index }: { member: (typeof members)[0]; index: num
 
 export default function OurTeamPage() {
   return (
-    <section className="w-full pb-0 pt-[200px] bg-[#6f8fa3]">
+    <section className="w-full pb-0 pt-[200px] bg-[#507490]">
 
       {/* TEAM MEMBERS — alternating rows */}
       <div className="flex flex-col">
