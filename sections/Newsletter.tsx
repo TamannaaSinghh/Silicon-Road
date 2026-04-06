@@ -36,9 +36,9 @@ export default function Newsletter() {
           <div className="border-b-2 border-red-500 w-full mb-4"></div>
 
           {/* Thanks text */}
-          <p className="text-yellow-400 text-[18px] mb-10 flex justify-end">
+          {/* <p className="text-yellow-400 text-[18px] mb-10 flex justify-end">
             Thanks!
-          </p>
+          </p> */}
 
           {/* Button */}
           <button className="px-12 py-5 border border-yellow-400 rounded-full text-[14px] tracking-[3px] uppercase hover:bg-yellow-400 transition">
