@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <section className="w-full bg-[#ffffff] min-h-[50vh] flex items-center pt-[200px]">
       <div className="max-w-[1200px] mx-auto w-full px-6 grid grid-cols-2 gap-10 items-center">
-        
+
         {/* LEFT SIDE */}
         <div>
           <motion.h1
@@ -47,13 +47,13 @@ export default function Hero() {
         </div>
       </div>
 
-   
+
 
       {/* VIDEO MODAL */}
       {open && (
         <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
           <div className="relative w-[80%] max-w-[800px]">
-            
+
             {/* Close */}
             <button
               onClick={() => setOpen(false)}

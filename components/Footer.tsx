@@ -8,28 +8,29 @@ export default function Footer() {
   return (
     <footer className="w-full bg-[#5a5a5a] text-white py-[70px]">
       <div className="max-w-[1200px] mx-auto px-6">
-        
+
         {/* Top Section */}
         <div className="grid grid-cols-4 gap-16 items-start">
-          
+
           {/* Logo */}
           <div>
-            <Link href="/">
-            <Image
-              src="/images/logo.png"
-              alt="logo"
-              width={150}
-              height={150}
-              className="object-contain"
-            />
+            <Link href="/" aria-label="Silicon Road Ventures — home">
+              <Image
+                src="/images/logo.png"
+                alt=""
+                role="presentation"
+                width={150}
+                height={150}
+                className="object-contain"
+              />
             </Link>
           </div>
 
           {/* Address 2 */}
           <div>
-            <p className="font-bold mb-4">
+            <h3 className="font-bold mb-4">
               Silicon Road Ventures
-            </p>
+            </h3>
             <p className="text-sm text-white/80 leading-7">
               One World Center <br />
               Suite 625 <br />
@@ -39,9 +40,9 @@ export default function Footer() {
 
           {/* Address 1 */}
           <div>
-            <p className="font-bold mb-4">
+            <h3 className="font-bold mb-4">
               Silicon Road Ventures
-            </p>
+            </h3>
             <p className="text-sm text-white/80 leading-7">
               1447 Peachtree St NE <br />
               Suite 700 <br />
@@ -49,25 +50,25 @@ export default function Footer() {
             </p>
           </div>
 
-          
+
 
           {/* Social */}
           <div>
-            <p className="font-bold mb-6">
+            <h4 className="font-bold mb-6">
               Follow us
-            </p>
+            </h4>
 
             <div className="flex gap-4">
-              
+
               {/* LinkedIn */}
               <a
                 href="https://www.linkedin.com/company/siliconroadusa/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="LinkedIn"
+                aria-label="Silicon Road Ventures on LinkedIn"
                 className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-black"
               >
-                <FaLinkedinIn />
+                <FaLinkedinIn aria-hidden="true" />
               </a>
 
               {/* Twitter */}
@@ -75,10 +76,10 @@ export default function Footer() {
                 href="https://x.com/siliconroadhq?lang=en"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="X (Twitter)"
+                aria-label="Silicon Road Ventures on X (Twitter)"
                 className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-black"
               >
-                <FaTwitter />
+                <FaTwitter aria-hidden="true" />
               </a>
 
             </div>

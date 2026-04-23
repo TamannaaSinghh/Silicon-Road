@@ -38,29 +38,28 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 
-      ${show ? "translate-y-0" : "-translate-y-full"} 
+      className={`fixed top-0 w-full z-50 transition-all duration-300
+      ${show ? "translate-y-0" : "-translate-y-full"}
       ${blur ? "backdrop-blur-md bg-white/80" : "bg-white"}`}
     >
       <div className="max-w-[1200px] mx-auto flex items-center justify-between px-6 py-6">
-        
+
         {/* Logo Section */}
         <div className="flex flex-col items-start">
-          <Link href="/">
-          <Image
-          
-            src="/images/logo.png"
-            
-            alt="logo"
-            width={150}
-            height={150}
-            className="object-contain"
-          />
+          <Link href="/" aria-label="Silicon Road Ventures — home">
+            <Image
+              src="/images/logo.png"
+              alt=""
+              role="presentation"
+              width={150}
+              height={150}
+              className="object-contain"
+            />
           </Link>
         </div>
 
         {/* Navigation Links */}
-        <nav className="flex gap-[60px] text-[16px] tracking-[2px] uppercase">
+        <nav aria-label="Primary" className="flex gap-[60px] text-[16px] tracking-[2px] uppercase">
           {[
             { label: "Portfolio", href: "/portfolio" },
             { label: "Our Team", href: "/our-team" },
@@ -72,6 +71,7 @@ export default function Navbar() {
               <a
                 key={href}
                 href={href}
+                aria-current={isActive ? "page" : undefined}
                 className={`transition hover:opacity-70 ${isActive ? "text-gray-500" : ""}`}
               >
                 {label}

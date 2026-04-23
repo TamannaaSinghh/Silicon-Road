@@ -34,7 +34,7 @@ function TeamCard({ member, index }: { member: (typeof team)[0]; index: number }
       {/* Image */}
       <img
         src={member.image}
-        alt={member.name}
+        alt={`${member.name}, ${member.role} at Silicon Road Ventures`}
         className="w-full h-[320px] object-cover"
       />
 
@@ -88,6 +88,7 @@ export default function Team() {
           <div className="justify-center items-center text-center col-span-4 pt-[60px]">
             <a
               href="/our-team"
+              aria-label="Our Team"
               className="mt-10 px-8 py-5 border border-yellow-400 rounded-full text-center items-center text-[16px] text-[#ffffff] tracking-[2px] uppercase bg-[#4e6472] hover:bg-yellow-400 transition hover:text-black"
             >
               get to know us

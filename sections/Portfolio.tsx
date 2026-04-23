@@ -26,19 +26,20 @@ export default function Portfolio() {
         {/* RIGHT SIDE (CLICKABLE IMAGE) */}
         <a
           href="/portfolio"
-
+          aria-label="View our portfolio of commerce startups"
           className="block"
         >
           <div className="relative rounded-[40px] overflow-hidden">
             <img
-              src="/images/portfolio3.png" // replace with your image
-              alt="portfolio"
+              src="/images/portfolio3.png"
+              alt=""
+              role="presentation"
               className="w-full h-[300px] object-cover hover:scale-105 transition duration-300"
             />
             <div className="absolute inset-0 flex items-center justify-center">
               <img
                 src="/images/portfolio-logos/onestack.png"
-                alt="OneStack"
+                alt="OneStack logo, a featured commerce startup"
                 className="w-40 object-contain drop-shadow-lg"
               />
             </div>

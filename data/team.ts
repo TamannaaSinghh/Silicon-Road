@@ -1,52 +1,52 @@
 export const team = [
   {
-    name: "Sid Mookerji.",
+    name: "Sid Mookerji",
     role: "Managing Partner",
     image: "/images/SidMookerji.png",
   },
   {
-    name: "Ajay Mahajan.",
+    name: "Ajay Mahajan",
     role: "Managing director & Partner",
     image: "/images/Ajay.png",
   },
   {
-    name: "Ross Kimbel.",
+    name: "Ross Kimbel",
     role: "General Partner",
     image: "/images/RossKimbel.png",
   },
   {
-    name: "Frank Tighe.",
+    name: "Frank Tighe",
     role: "General Partner",
     image: "/images/FrankTighe.png",
   },
   {
-    name: "Carson Cromartie.",
+    name: "Carson Cromartie",
     role: "Principal",
     image: "/images/CARSON.png",
   },
   {
-    name: "Shaunish Mookerji.",
+    name: "Shaunish Mookerji",
     role: "Principal At Large",
     image: "/images/ShaunishMookerji.png",
   },
-  
+
   {
-    name: "Gaurav Thakkar.",
+    name: "Gaurav Thakkar",
     role: "Principal",
     image: "/images/GauravThakker.png",
   },
   {
-    name: "Deeksha Narendra Kumar.",
+    name: "Deeksha Narendra Kumar",
     role: "Senior Associate",
     image: "/images/Deeksha.png",
   },
   {
-    name: "Sig Mosley.",
+    name: "Sig Mosley",
     role: "Advisor",
     image: "/images/SIGMOSLEY.png",
   },
   {
-    name: "Frank Blake.",
+    name: "Frank Blake",
     role: "Advisor",
     image: "/images/FRANKBLAKE.png",
   },

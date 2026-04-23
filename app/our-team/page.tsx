@@ -38,7 +38,7 @@ function AdvisorCard({ advisor, index }: { advisor: (typeof advisors)[0]; index:
       <div className="relative w-full rounded-[40px] overflow-hidden">
         <Image
           src={advisor.image}
-          alt={advisor.name}
+          alt={`${advisor.name}, ${advisor.role.toLowerCase()} at Silicon Road Ventures`}
           width={220}
           height={260}
           className="w-full h-[260px] object-cover"
@@ -71,8 +71,9 @@ function AdvisorCard({ advisor, index }: { advisor: (typeof advisors)[0]; index:
         {advisor.companies.map((logo, i) => (
           <Image
             key={i}
-            src={logo}
-            alt="company"
+            src={logo.src}
+            alt={logo.alt}
+            role={logo.alt === "" ? "presentation" : undefined}
             width={200}
             height={100}
             className="object-contain opacity-90 w-[200px] h-[100px]"
@@ -110,13 +111,25 @@ function MemberCard({ member, index }: { member: (typeof members)[0]; index: num
         {/* SOCIAL ICONS */}
         <div className="flex flex-col gap-4 items-center shrink-0 w-[40px]">
           {member.twitter && (
-            <a href={member.twitter} target="_blank" rel="noopener noreferrer" className="text-white font-bold text-[22px]">
-              𝕏
+            <a
+              href={member.twitter}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${member.name} on X (Twitter)`}
+              className="text-white font-bold text-[22px]"
+            >
+              <span aria-hidden="true">𝕏</span>
             </a>
           )}
           {member.linkedin && (
-            <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-white font-bold text-[22px]">
-              in
+            <a
+              href={member.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${member.name} on LinkedIn`}
+              className="text-white font-bold text-[22px]"
+            >
+              <span aria-hidden="true">in</span>
             </a>
           )}
         </div>
@@ -125,7 +138,7 @@ function MemberCard({ member, index }: { member: (typeof members)[0]; index: num
         <div className="rounded-[40px] overflow-hidden shrink-0">
           <Image
             src={member.image}
-            alt={member.name}
+            alt={`${member.name}, ${member.role.toLowerCase()} at Silicon Road Ventures`}
             width={300}
             height={340}
             className="object-cover w-[300px] h-[340px]"
@@ -147,7 +160,7 @@ function MemberCard({ member, index }: { member: (typeof members)[0]; index: num
             {member.role}
           </p>
           <p
-            className="text-white/90 leading-[30px] mb-8 transition-all duration-700 ease-out"
+            className="text-white leading-[30px] mb-8 transition-all duration-700 ease-out"
             style={{ opacity: visible ? 1 : 0, transform: visible ? "translateX(0)" : "translateX(60px)", transitionDelay: "300ms" }}
           >
             {member.description}
@@ -159,8 +172,9 @@ function MemberCard({ member, index }: { member: (typeof members)[0]; index: num
             {member.companies.map((logo, i) => (
               <Image
                 key={i}
-                src={logo}
-                alt="company"
+                src={logo.src}
+                alt={logo.alt}
+                role={logo.alt === "" ? "presentation" : undefined}
                 width={80}
                 height={50}
                 className="object-contain opacity-90 w-[130px] h-[70px]"
@@ -204,6 +218,7 @@ export default function OurTeamPage() {
         </h2>
         <a
           href="/contact"
+          aria-label="Contact Us"
           className="px-16 py-5 border border-yellow-400 rounded-full text-[#2d2d2d] text-[14px] tracking-[3px] uppercase hover:bg-yellow-400 transition hover:text-black"
         >
           Reach Out

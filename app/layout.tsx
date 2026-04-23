@@ -16,8 +16,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-[#ffffff] text-[#0a0a0a]">
-        <Navbar/>
-        {children}
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-black focus:text-white focus:px-4 focus:py-2 focus:rounded"
+        >
+          Skip to main content
+        </a>
+        <Navbar />
+        <main id="main">{children}</main>
         <Footer />
       </body>
     </html>

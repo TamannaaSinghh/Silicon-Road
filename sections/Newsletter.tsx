@@ -5,10 +5,11 @@ export default function Newsletter() {
     <section className="w-full relative py-[70px]">
       
       {/* Background Image */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0" aria-hidden="true">
         <img
-          src="/images/newsletter-bg.png" // add your bg image
-          alt="bg"
+          src="/images/newsletter-bg.png"
+          alt=""
+          role="presentation"
           className="w-full h-full object-cover"
         />
       </div>
@@ -17,7 +18,7 @@ export default function Newsletter() {
       <div className="relative max-w-[1200px] mx-auto px-6">
         
         {/* Small Heading */}
-        <p className="text-[20px] tracking-[6px] text-[#6b7c85] mb-3">
+        <p className="text-[20px] tracking-[6px] text-[#4a5962] mb-3">
           JOIN US
         </p>
 
