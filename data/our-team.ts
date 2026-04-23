@@ -37,7 +37,7 @@ export const teamData = [
     twitter: "https://x.com/rosskimbel",
     linkedin: "https://www.linkedin.com/in/ross-kimbel-a112684/",
     companies: [
-      { src: "/images/RossKimbel/Coca-Cola_logo_white.png", alt: "Coca-Cola logo" },
+      { src: "/images/RossKimbel/Coca-Cola_logo_white.png", alt: "Coca-Cola company logo" },
       { src: "/images/RossKimbel/Image 5.png", alt: "" },
       { src: "/images/RossKimbel/Image 6.png", alt: "" },
     ],
@@ -53,7 +53,7 @@ export const teamData = [
     companies: [
       { src: "/images/FrankTighe/1.png", alt: "Georgia Tech ATDC logo" },
       { src: "/images/FrankTighe/2.png", alt: "Retina Labs logo" },
-      { src: "/images/FrankTighe/3.png", alt: "Iridex logo" },
+      { src: "/images/FrankTighe/3.png", alt: "Iridex company logo" },
       { src: "/images/FrankTighe/4.png", alt: "" },
     ],
   },
@@ -67,7 +67,7 @@ export const teamData = [
     linkedin: "https://www.linkedin.com/in/carson-cromartie-a3904894/",
     companies: [
       { src: "/images/Carson/1.png", alt: "Raytheon Technologies logo" },
-      { src: "/images/Carson/2.png", alt: "Emory University logo" },
+      { src: "/images/Carson/2.png", alt: "Emory University official logo" },
     ],
   },
   {
@@ -80,7 +80,7 @@ export const teamData = [
     linkedin: "https://www.linkedin.com/in/shaunish/",
     companies: [
       { src: "/images/Shanuish/1.png", alt: "Georgia Tech logo" },
-      { src: "/images/Shanuish/2.png", alt: "Intel logo" },
+      { src: "/images/Shanuish/2.png", alt: "Intel company logo" },
     ],
   },
   {
