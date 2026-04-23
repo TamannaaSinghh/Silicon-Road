@@ -11,3 +11,15 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+:focus-visible {
+  outline: 2px solid #1a1a2e;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+footer :focus-visible,
+nav :focus-visible,
+[data-dark-bg] :focus-visible {
+  outline-color: #facc15;
+}

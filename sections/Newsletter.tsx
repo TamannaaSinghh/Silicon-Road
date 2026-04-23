@@ -24,7 +24,7 @@ export default function Newsletter() {
 
         {/* Main Heading */}
         <h2 className="text-[46px] leading-[50px] font-bold text-[#4a4f55] mb-16">
-          Subscribe to <br />
+          Subscribe to<br />
           our newsletter
         </h2>
 

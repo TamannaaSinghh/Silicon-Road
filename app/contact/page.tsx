@@ -88,7 +88,7 @@ const ContactPage = () => {
       <div className="relative z-10 w-full bg-[#44494f] px-16 py-24 flex flex-col items-center text-center">
         <p className="text-[13px] tracking-[4px] text-gray-200 mb-4">JOIN US</p>
         <h2 className="text-white text-[36px] font-bold leading-tight mb-8">
-          Subscribe to <br /> our newsletter
+          Subscribe to<br />our newsletter
         </h2>
         <form className="flex flex-col items-center" onSubmit={(e) => e.preventDefault()}>
           <label
@@ -103,11 +103,11 @@ const ContactPage = () => {
             type="email"
             autoComplete="email"
             required
-            className="block w-[340px] bg-white text-gray-800 px-4 py-3 mb-3 focus:outline-none"
+            className="block w-[340px] bg-white text-gray-800 px-4 py-3 mb-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400 focus-visible:ring-offset-2"
           />
           <button
             type="submit"
-            className="bg-[#777777] hover:bg-[#6b7280] text-white text-[14px] px-6 py-3 transition rounded-md"
+            className="bg-[#595959] hover:bg-[#3f3f3f] text-white text-[14px] px-6 py-3 transition rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400 focus-visible:ring-offset-2"
           >
             Subscribe
           </button>

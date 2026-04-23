@@ -28,9 +28,9 @@ export default function Footer() {
 
           {/* Address 2 */}
           <div>
-            <h3 className="font-bold mb-4">
+            <h2 className="font-bold mb-4">
               Silicon Road Ventures
-            </h3>
+            </h2>
             <p className="text-sm text-white/80 leading-7">
               One World Center <br />
               Suite 625 <br />
@@ -40,9 +40,9 @@ export default function Footer() {
 
           {/* Address 1 */}
           <div>
-            <h3 className="font-bold mb-4">
+            <h2 className="font-bold mb-4">
               Silicon Road Ventures
-            </h3>
+            </h2>
             <p className="text-sm text-white/80 leading-7">
               1447 Peachtree St NE <br />
               Suite 700 <br />
@@ -54,9 +54,9 @@ export default function Footer() {
 
           {/* Social */}
           <div>
-            <h4 className="font-bold mb-6">
+            <h3 className="font-bold mb-6">
               Follow us
-            </h4>
+            </h3>
 
             <div className="flex gap-4">
 

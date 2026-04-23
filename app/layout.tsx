@@ -4,7 +4,10 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Silicon Road",
+  title: {
+    default: "Silicon Road Ventures",
+    template: "%s | Silicon Road Ventures",
+  },
   description: "Early-stage venture capital firm",
 };
 
@@ -23,7 +26,7 @@ export default function RootLayout({
           Skip to main content
         </a>
         <Navbar />
-        <main id="main">{children}</main>
+        <main id="main" tabIndex={-1} className="focus:outline-none">{children}</main>
         <Footer />
       </body>
     </html>

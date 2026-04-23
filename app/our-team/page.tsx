@@ -192,6 +192,8 @@ export default function OurTeamPage() {
   return (
     <section className="w-full pb-0 pt-[200px] bg-[#507490]">
 
+      <h1 className="sr-only">Our Team</h1>
+
       {/* TEAM MEMBERS — alternating rows */}
       <div className="flex flex-col">
         {members.map((member, index) => (
