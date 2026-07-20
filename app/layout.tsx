@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import AccessibilityWidget from "@/components/AccessibilityWidget";
 
 export const metadata: Metadata = {
   title: {
@@ -28,6 +29,7 @@ export default function RootLayout({
         <Navbar />
         <main id="main" tabIndex={-1} className="focus:outline-none">{children}</main>
         <Footer />
+        <AccessibilityWidget />
       </body>
     </html>
   );
